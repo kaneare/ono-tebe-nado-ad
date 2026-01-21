@@ -5,16 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Посмотри в окно</title>
+    <!-- Порядок подключения: сначала шрифты -->
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <!-- Потом собственные стили -->
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/error.css" />
+    <!-- Добавляем шрифт Raleway с альтернативами -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Устанавливаем Raleway как основной шрифт */
+      body {
+        font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      }
+    </style>
   </head>
   <body class="page">
+    <!-- Добавляем семантический header -->
+    <header class="header">
+      <div class="header__container">
+        <!-- Логотип обернут в ссылку -->
+        <a href="/" class="header__logo-link">
+          <div class="header__logo">Посмотри в окно</div>
+        </a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <!-- Ссылка на телефон с префиксом tel: -->
+              <a href="tel:+78005558628" class="header__link">+7 (800) 555-86-28</a>
+            </li>
+            <li class="header__nav-item">
+              <!-- Ссылка на почту с префиксом mailto: -->
+              <a href="mailto:hello@window.com" class="header__link">hello@window.com</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <main class="content">
       <section class="result">
         <div class="result__video-container">
-          <video src="" controls class="result__video" poster=""></video>
+          <!-- Указываем непустые значения для src и poster -->
+          <video src="./videos/placeholder.mp4" controls class="result__video" poster="./images/video-poster.jpg"></video>
         </div>
         <form class="search-form">
           <fieldset class="search-form__fieldset">
@@ -79,7 +114,16 @@
       </section>
     </main>
 
-    
+    <!-- Добавляем семантический footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copyright">© 2023 Посмотри в окно</p>
+        <nav class="footer__nav">
+          <a href="/privacy" class="footer__link">Политика конфиденциальности</a>
+          <a href="/terms" class="footer__link">Условия использования</a>
+        </nav>
+      </div>
+    </footer>
 
     <template class="preloader-template">
       <div class="preloader">
@@ -114,6 +158,61 @@
         <h2 class="error__title"></h2>
       </div>
     </template>
+    
+    <!-- Добавляем стиль для предотвращения горизонтальной прокрутки -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+      
+      .page {
+        min-width: 320px;
+        max-width: 100%;
+      }
+      
+      /* Базовые стили для семантических тегов */
+      .header, .footer {
+        width: 100%;
+        padding: 20px;
+        background-color: #f8f8f8;
+      }
+      
+      .header__container, .footer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .header__logo-link {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      .header__nav-list, .footer__nav {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+      
+      .header__link, .footer__link {
+        text-decoration: none;
+        color: #333;
+      }
+      
+      .footer {
+        margin-top: auto;
+      }
+    </style>
+    
     <script src="./scripts/script.js"></script>
   </body>
 </html>
