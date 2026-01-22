@@ -4,215 +4,139 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Посмотри в окно</title>
-    <!-- Порядок подключения: сначала шрифты -->
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <!-- Потом собственные стили -->
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/preloader.css" />
-    <link rel="stylesheet" href="./styles/error.css" />
-    <!-- Добавляем шрифт Raleway с альтернативами -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
-    <style>
-      /* Устанавливаем Raleway как основной шрифт */
-      body {
-        font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-      }
-    </style>
+    <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
+    <link rel="stylesheet" href="./fonts/fonts.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
   </head>
-  <body class="page">
-    <!-- Добавляем семантический header -->
-    <header class="header">
-      <div class="header__container">
-        <!-- Логотип обернут в ссылку -->
-        <a href="/" class="header__logo-link">
-          <div class="header__logo">Посмотри в окно</div>
-        </a>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <!-- Ссылка на телефон с префиксом tel: -->
-              <a href="tel:+78005558628" class="header__link">+7 (800) 555-86-28</a>
-            </li>
-            <li class="header__nav-item">
-              <!-- Ссылка на почту с префиксом mailto: -->
-              <a href="mailto:hello@window.com" class="header__link">hello@window.com</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  <body>
+    <header class="header content__theme">
+      <nav class="header__menu">
+        <ul class="header__links-list">
+          <li class="header__links-link-item header__links-list-item_no-bullit">
+            <a class="header_link header__link_active" href="#0">главная</a>
+          </li>
+          <li class="header__links-link-item">
+            <a class="header__link" href="#0">посмотреть лоты</a>
+          </li>
+          <li class="header__links-link-item">
+            <a class="header__link" href="#0">об аукционе</a>
+          </li>
+        </ul> 
+      </nav>
+      <a><img class="header__logo-image" src="../images/logo-black.svg" alt="Логотип оно тебе надо"></a>
+      <address class="address header__address">
+        <a href="tel:+99995555555">+9 999 555 5555</a><br>
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+        <span>наб. Принсенграхт 263-</span>
+        <span>265, Амстердам</span>
+      </address>
     </header>
-
-    <main class="content">
-      <section class="result">
-        <div class="result__video-container">
-          <!-- Указываем непустые значения для src и poster -->
-          <video src="./videos/placeholder.mp4" controls class="result__video" poster="./images/video-poster.jpg"></video>
-        </div>
-        <form class="search-form">
-          <fieldset class="search-form__fieldset">
-            <h2 class="search-form__fieldset-title">Город</h2>
-            <label class="search-form__label">
-              <span class="search-form__label-text visually-hidden">Город</span>
-              <input
-                type="text"
-                placeholder="Санкт Петербург, например"
-                name="city"
-                class="search-form__textfield"
-              />
-            </label>
-          </fieldset>
-          <fieldset class="search-form__fieldset">
-            <h2 class="search-form__fieldset-title">Время суток</h2>
-            <div class="search-form__checkbox-list">
-              <label class="search-form__label">
-                <input
-                  type="checkbox"
-                  name="time"
-                  value="morning"
-                  class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">Утро</span>
-              </label>
-              <label class="search-form__label">
-                <input
-                  type="checkbox"
-                  name="time"
-                  value="afternoon"
-                  class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">День</span>
-              </label>
-              <label class="search-form__label">
-                <input
-                  type="checkbox"
-                  name="time"
-                  value="night"
-                  class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">Ночь</span>
-              </label>
-            </div>
-          </fieldset>
-          <button type="submit" class="button search-form__submit-button">
-            Найти
-          </button>
-        </form>
-      </section>
-      <section class="content__details">
-        <h1 class="title">
-          <span class="content__accent">По-</span><br />смотри<br />в окно
+    <main class="main content__theme">
+      <section class="cover">
+        <div class="overlay"></div>
+        <h1 class="cover__title">
+          <span class="aligned-text">он<span class="letter-spacing-extended">о</span> </span>
+          <span class="aligned-text aligned-text_center">тeб<span class="no-letter-spacing">е</span></span>
+          <span class="aligned-text aligned-text_right">над<span class="no-letter-spacing">о</span></span>
         </h1>
-        <ul class="content__list">
-          
+        <div class="cover__description">
+          <p class="cover__description-text">Аукцион вещей в которые никто не верил</p>
+          <button class="bet_button" type="button">Сделать ставку</button>
+        </div>
+      </section>
+      <section class="lots">
+        <h2 class="lots__heading">лоты</h2>
+        <ul class="lots__card-list">
+          <li class="lots__card-list-item">
+            <a class="card-link" href="#0">  
+              <article class="card card_type_film">
+                <div class="overlay"></div>
+                <h3 class="card__title">Фильм режиссёра, который бросил киношколу</h3>
+                <p class="card__text">Не просто бросил, а ушёл с первой лекции. 
+                  Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
+              </article>
+            </a>
+          </li>
+          <li class="lots__card-list-item">
+            <a class="card-link" href="#0">
+              <article class="card card_type_book">
+                <div class="overlay"></div>
+                <h3 class="card__title">Книга, где описан один скучный день из жизни рекламного агента</h3>
+                <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
+              </article>
+            </a>
+          </li>
+          <li class="lots__card-list-item">
+            <a class="card-link" href="#0">
+              <article class="card card_type_picture">
+                <div class="overlay"></div>
+                <h3 class="card__title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
+                <p class="card__text">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков<span class="card__text-letter-spacing">... </span>Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
+              </article>
+            </a>
+          </li>
         </ul>
+        <a class="lots__look-more-link" href="#0">посмотреть больше</a>
+      </section>
+      <section class="about">
+        <div class="about__logo">
+          <img src="./images/logo-white.svg" class="about__logo-image" alt="Логотип оно тебе надо">
+        </div>
+          <div class="about__column">
+            <h2 class="about__title">Об аукционе</h2>
+            <div class="about__text">
+            <p>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. 
+              Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? 
+              Кому нужны все эти странные вещи, созданные любителями?
+            </p>
+            <p>Слишком сложные или, наоборот, слишком простые. Опережающие своё время. 
+              В пух и прах растерзанные критиками. 
+              Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
+              на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную культуру. 
+              Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми. 
+            </p>
+          </div>
+        </div>
       </section>
     </main>
-
-    <!-- Добавляем семантический footer -->
-    <footer class="footer">
-      <div class="footer__container">
-        <p class="footer__copyright">© 2023 Посмотри в окно</p>
-        <nav class="footer__nav">
-          <a href="/privacy" class="footer__link">Политика конфиденциальности</a>
-          <a href="/terms" class="footer__link">Условия использования</a>
-        </nav>
-      </div>
+    <footer class="footer content__theme">
+      <address class="address">
+        <a href="tel:+99995555555">+9 999 555 5555</a><br>
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+        <span>наб. Принсенграхт 263-</span>
+        <span>265, Амстердам</span>
+      </address>
+      <nav class="footer__menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-list-item">
+            <a href="#0" class="footer__menu-link footer__menu-link_active">главная</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#0" class="footer__menu-link">посмотреть лоты</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#0" class="footer__menu-link">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+        <ul class="footer__social-list">
+          <li class="footer__social-list-item">
+            <a class="footer__social-link" href="#0">
+              <img class="footer__social-icon" src="./images/yt.svg" alt="Иконка YouTube">
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a class="footer__social-link" href="#0">
+              <img class="footer__social-icon" src="./images/vk.svg" alt="Иконка VК">
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a class="footer__social-link" href="#0">
+              <img class="footer__social-icon" src="./images/pinterest.svg" alt="Иконка пинтерест">
+            </a>
+          </li>
+        </ul>
     </footer>
-
-    <template class="preloader-template">
-      <div class="preloader">
-        <div class="preloader-chasing-squares">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-      </div>
-    </template>
-
-    <template class="cards-list-item-template">
-      <li class="content__list-item">
-        <a href="#0" class="content__card-link">
-          <article class="content__video-card">
-            <div class="content__video-card-description-container">
-              <h2 class="content__video-card-title"></h2>
-              <p class="content__video-card-description"></p>
-            </div>
-            <img src="" alt="" class="content__video-card-thumbnail" />
-          </article>
-        </a>
-      </li>
-    </template>
-    <template class="more-button-template">
-      <li><button class="button more-button">Показать еще</button></li>
-    </template>
-
-    <template class="error-template">
-      <div class="error">
-        <h2 class="error__title"></h2>
-      </div>
-    </template>
-    
-    <!-- Добавляем стиль для предотвращения горизонтальной прокрутки -->
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      
-      body {
-        overflow-x: hidden;
-        max-width: 100vw;
-      }
-      
-      .page {
-        min-width: 320px;
-        max-width: 100%;
-      }
-      
-      /* Базовые стили для семантических тегов */
-      .header, .footer {
-        width: 100%;
-        padding: 20px;
-        background-color: #f8f8f8;
-      }
-      
-      .header__container, .footer__container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .header__logo-link {
-        text-decoration: none;
-        color: inherit;
-      }
-      
-      .header__nav-list, .footer__nav {
-        display: flex;
-        list-style: none;
-        gap: 20px;
-      }
-      
-      .header__link, .footer__link {
-        text-decoration: none;
-        color: #333;
-      }
-      
-      .footer {
-        margin-top: auto;
-      }
-    </style>
-    
-    <script src="./scripts/script.js"></script>
   </body>
 </html>
